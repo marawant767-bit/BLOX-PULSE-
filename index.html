@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d2b">
+  <meta name="description" content="Discover BLOX PULSE, a colorful block puzzle game.">
+  <title>BLOX PULSE — Block Puzzle</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070b24;--panel:#10183c;--cyan:#22d7ff;--pink:#d34dff;--text:#f4f7ff;--muted:#b9c5ef}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(ellipse at top,#182a70 0,#070b24 55%);color:var(--text);line-height:1.6}
+    .wrap{width:min(1080px,92%);margin:auto}
+    header{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-size:1.35rem;font-weight:900;letter-spacing:.08em;text-decoration:none;color:white}
+    .brand span{color:var(--cyan)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:.95rem}
+    nav a:hover{color:white}
+    .hero{padding:68px 0 76px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+    .tag{display:inline-block;border:1px solid #2c7eff;border-radius:99px;padding:5px 12px;color:#aeeeff;background:#10255b;font-size:.85rem}
+    h1{font-size:clamp(2.6rem,7vw,5rem);line-height:.98;margin:18px 0;letter-spacing:-.04em}
+    h1 .blue{color:var(--cyan)} h1 .pink{color:#e58aff}
+    .lead{color:var(--muted);font-size:1.12rem;max-width:620px}
+    .btn{display:inline-block;margin-top:18px;padding:11px 18px;border-radius:12px;background:linear-gradient(100deg,#087dff,#8a39ff);color:white;text-decoration:none;font-weight:750;box-shadow:0 8px 28px #086bff42}
+    .showcase{border:1px solid #385bce;border-radius:28px;padding:24px;background:linear-gradient(145deg,#121f54dd,#0c1234);box-shadow:0 20px 70px #0008;transform:rotate(1deg)}
+    .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+    .tile{aspect-ratio:1;border-radius:10px;background:linear-gradient(145deg,#47dfff,#0873ff);box-shadow:inset 2px 2px 0 #ffffff66,0 5px 12px #008bff55}
+    .tile:nth-child(3n){background:linear-gradient(145deg,#ff79df,#9c32ff)}
+    .tile:nth-child(4n){background:linear-gradient(145deg,#b3ff69,#23c778)}
+    .tile:nth-child(5n){background:linear-gradient(145deg,#ffe477,#ff8a18)}
+    .score{margin-top:18px;padding:13px 16px;background:#080f2b;border:1px solid #294d9b;border-radius:14px;display:flex;justify-content:space-between;color:#b9d8ff}
+    section{padding:35px 0}
+    h2{font-size:2rem;margin:0 0 12px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:#10183cdd;border:1px solid #263b7a;border-radius:18px;padding:22px}
+    .icon{font-size:1.8rem}
+    .card p,.small{color:var(--muted)}
+    footer{margin-top:40px;border-top:1px solid #26345f;padding:25px 0 35px;color:var(--muted);font-size:.9rem}
+    footer a{color:#9feaff}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:42px}.showcase{max-width:520px}.cards{grid-template-columns:1fr}nav a{margin-left:10px;font-size:.85rem}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#" aria-label="BLOX PULSE home">BLOX <span>PULSE</span></a>
+      <nav><a href="#features">Features</a><a href="#about">About</a><a href="privacy.html">Privacy Policy</a></nav>
+    </header>
+    <main>
+      <section class="hero" id="about">
+        <div>
+          <span class="tag">A colorful block puzzle experience</span>
+          <h1>Match the blocks.<br><span class="blue">Feel the</span> <span class="pink">pulse.</span></h1>
+          <p class="lead">Welcome to BLOX PULSE, a bright puzzle-game concept built around colorful blocks, quick thinking, and a futuristic neon atmosphere.</p>
+          <a class="btn" href="#features">Explore the game</a>
+          <p class="small">Game availability and features may vary by version.</p>
+        </div>
+        <div class="showcase" aria-label="Decorative colorful puzzle blocks">
+          <div class="tiles">
+            <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+            <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+            <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+            <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+            <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+          </div>
+          <div class="score"><span>PUZZLE MODE</span><strong>✦ BLOX PULSE</strong></div>
+        </div>
+      </section>
+      <section id="features">
+        <h2>Made for puzzle fans</h2>
+        <p class="lead">A clean, colorful presentation for a block-puzzle game.</p>
+        <div class="cards">
+          <article class="card"><div class="icon">🧩</div><h3>Think in blocks</h3><p>Plan your moves and enjoy a puzzle-focused experience.</p></article>
+          <article class="card"><div class="icon">✨</div><h3>Neon style</h3><p>Bright colors and a futuristic look give the game its identity.</p></article>
+          <article class="card"><div class="icon">🎮</div><h3>Pick up and play</h3><p>Designed to make the core puzzle experience easy to approach.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>© <span id="year"></span> BLOX PULSE. All rights reserved.</div>
+      <div><a href="privacy.html">Privacy Policy</a></div>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
